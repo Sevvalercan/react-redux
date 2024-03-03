@@ -1,12 +1,11 @@
-import React from "react";
+import { useSelector } from "react-redux";
+import { loginHandle, logoutHandle } from "../utils";
 
-export default function Header({ user, setUser }) {
-  const loginHandle = (user) => {
-    setUser(user);
-  };
+export default function Header() {
+  const { user } = useSelector((state) => state.auth);
 
-  const logoutHandle = () => {
-    setUser(false);
+  const login = (user) => {
+    loginHandle(user);
   };
 
   return (
