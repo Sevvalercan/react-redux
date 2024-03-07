@@ -4,9 +4,7 @@ import { login, logout } from "./stores/auth";
 import { openModal } from "./stores/modal";
 
 // //tüm hepsini verir auth,modal todo gibi
-// // console.log(
-// //     store.getState()
-// // )
+// // console.log(store.getState())
 
 export const addTodoHandle = (todo) => {
   store.dispatch(addTodo(todo));

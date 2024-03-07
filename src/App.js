@@ -9,6 +9,8 @@ import Modal from "./todo/modal";
 
 function App() {
   const { open: isModalOpen } = useSelector((state) => state.modal);
+  const state = useSelector((state) => state);
+  console.log(state);
   const [language, setLanguage] = useState("tr"); //todo
   const [dark, setDark] = useState(true); //todo,
 

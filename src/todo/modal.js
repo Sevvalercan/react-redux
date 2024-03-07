@@ -4,11 +4,11 @@ import { closeModal } from "../stores/modal";
 
 export default function Modal() {
   const { name, data } = useSelector((state) => state.modal);
-
   const modal = modals.find((m) => m.name == name);
+  const dispatch = useDispatch();
 
   const close = () => {
-    dispatchEvent(closeModal());
+    dispatch(closeModal());
   };
 
   return (
